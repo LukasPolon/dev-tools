@@ -22,6 +22,12 @@
 ##
 #######################################
 -->
+00.01.00 (15/02/2019)
+---------------------
+* Added: apache-search command is implemented for single page search
+* Changed: .pylintrc customization
+* Changed: requirements.txt - pylint, click, bs4, requests, tabulate added
+
 
 00.00.01 (03/03/2019)
 ---------------------

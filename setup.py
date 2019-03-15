@@ -61,5 +61,10 @@ setup(
     author='Lukasz Polon',
     author_email='lukaspolon@gmail.com',
     packages=find_packages(),
-    install_requires=get_requirements()
+    install_requires=get_requirements(),
+    entry_points={
+        'console_scripts': [
+            'apache-search = tools.apache_search.shell:run'
+        ]
+    }
 )
