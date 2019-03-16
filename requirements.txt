@@ -4,4 +4,4 @@ requests==2.21.0
 pylint==2.3.1
 tabulate==0.8.3
 coverage==4.5.3
-
+coveralls==1.5.1
