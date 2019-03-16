@@ -22,6 +22,11 @@
 ##
 #######################################
 -->
+00.01.01 (16/02/2019)
+---------------------
+* Added: unit tests for page.py and page_search.py modules
+* Changed: .travis.yml to run coverage, coveralls and pylint
+
 00.01.00 (15/02/2019)
 ---------------------
 * Added: apache-search command is implemented for single page search

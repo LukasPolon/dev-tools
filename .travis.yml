@@ -4,5 +4,9 @@ python:
 install:
   - python setup.py install
 script:
-  - echo "Future tests..."
+  - coverage run -m unittest
+  - coverage report
+  - pylint ./tools --exit-zero
+after_success:
+  - coveralls
 

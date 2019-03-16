@@ -75,7 +75,8 @@ class Page:
                 self._page_bs(BeautifulSoup): bs4 object
         """
         if self._page_bs is None:
-            self._page_bs = BeautifulSoup(self._get_raw_page(), 'html.parser')
+            raw_page = self._get_raw_page()
+            self._page_bs = BeautifulSoup(raw_page, 'html.parser')
         return self._page_bs
 
     def _get_files(self):
