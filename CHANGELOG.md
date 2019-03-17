@@ -22,6 +22,10 @@
 ##
 #######################################
 -->
+00.01.02 (17/02/2019)
+---------------------
+* Added: unit tests for apache_search.src.cli.apache_search module
+
 00.01.01 (16/02/2019)
 ---------------------
 * Added: unit tests for page.py and page_search.py modules

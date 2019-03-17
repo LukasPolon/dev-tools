@@ -17,7 +17,7 @@ from tools.apache_search.src.page_search import single_page_search_dirs
               help='Show directories only.')
 @click.option('--files', '-f', is_flag=True, default=False,
               help='Show files only.')
-@click.option('--display_url', '-u', is_flag=True, required=False,
+@click.option('--display-url', '-u', is_flag=True, required=False,
               default=False, help='Show URLs only.')
 @click.argument('URL')
 def apache_search(url, display_url, files, dirs):
@@ -27,6 +27,11 @@ def apache_search(url, display_url, files, dirs):
         URL argument must be a full path to the directory we want to parse.
     """
     click.echo(f'>>>> Displaying content of: {url}')
+
+    if files and dirs:
+        raise click.ClickException(
+            'Options: --files and --dirs can not be used together.'
+        )
 
     file_list = single_page_search_files(url)
     dir_list = single_page_search_dirs(url)
