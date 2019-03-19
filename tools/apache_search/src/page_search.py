@@ -28,3 +28,24 @@ def single_page_search_dirs(url):
     page = Page(url)
     dir_list = page.subpages
     return dir_list
+
+
+def recursive_page_search(url):
+    """ Get list of files from given url, and all directories below.
+
+        Args:
+            url(str): full url to the page
+
+        Returns:
+            files(list): list of the files data
+    """
+    pages = [Page(url)]
+    files = list()
+
+    while pages:
+        page = pages.pop()
+        files += page.files
+        for subpage in page.subpages:
+            pages.append(Page(subpage['url']))
+
+    return files

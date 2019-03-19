@@ -22,6 +22,10 @@
 ##
 #######################################
 -->
+00.02.00 (19/02/2019)
+---------------------
+* Added: new option --recursive (-r), to list files from all nested subpages
+
 00.01.02 (17/02/2019)
 ---------------------
 * Added: unit tests for apache_search.src.cli.apache_search module
